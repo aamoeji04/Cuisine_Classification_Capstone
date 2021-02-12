@@ -4,9 +4,8 @@
 
 ## Data
 ### Insights
-
 ## Methods
 ## Results
-## Cnclusions
+## Conclusions
 # Next Steps 
 Final Capstone Project for Flatiron School
