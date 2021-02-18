@@ -44,7 +44,10 @@ To assist in exploratory data analysis, I used Regular Expressions to tokenize m
 4. From more cleaning, generate more insights to, again, help our model
 ### Neural Networks
 After bettering what our model has to work with and optimizing it to get the best F1 or accuracy score, we can move onto the creating a handy web app.
+1. Implement Naural Language Generation with the use of Markovify
+2. Utilize StreamLit to launch a simple web app that can take in a list of ingredients and out put a novel recipe
 
-5. Implement Naural Language Generation with the use of Markovify
-
-6. Utilize StreamLit to launch a simple web app that can take in a list of ingredients and out put a novel recipe
+## Helpful Sources
+1. j-gilkey's[recipes_nlp repository](https://github.com/j-gilkey/recipes_nlp)
+2. Jamie Cheng's[Predicting Cuisine Regionality Based on Recipe Ingredients using NLP](https://medium.com/@jaimejcheng/predicting-cuisine-regionality-based-on-recipe-ingredients-using-nlp-5262e83884eb)
+3. Monkey Learn's blog on [Classification Algorithms in Machine Learning: How They Work](https://monkeylearn.com/blog/classification-algorithms/)
