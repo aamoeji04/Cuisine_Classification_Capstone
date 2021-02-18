@@ -18,23 +18,49 @@ When we first take a look at our data, we can see the distribution of class that
 
 From the bar graph above, we can clearly see that a majority of our data consists of mexican recipes and comparitavelty there is a severe lack of caribbean recipes. Through further exploratory data analysis, we can generate more insights about our data. 
 ### Insights
+Looking at a couple wordclouds below:
 ![img](./images/Overall_Cuisines_wordcloud.png)
+
 Above is a wordcloud using all words, excluding custom or nltk stopwords. From this image alone we can make a few assumptions about our data. One is that most recipes seem to use an oil of some kind and garlic. If we remove these terms, we may be able to help our model distinguish between recipes and cuisines. This kind of analysis can be done for each and every recipe. As you can see in the example cuisine wordcloud from Vietnamese cusine, we would be able to thoroughly clean our data so the model has the simplest ingredients data to work with.
 ![img](./images/Vietnamese_wordcloud.png)
+
 Some obvious insights we can make from this is that Vietnamese cuisine heavily utilizes fish sauce and red chilli (most likely oil or sauce).
 
-## Methods
+## Methods and Results
 ### EDA
 To assist in exploratory data analysis, I used Regular Expressions to tokenize my ingredients, stemming and lemming to simplify my tokens, as well as WordCloud, Matplotlib and Seaborn to visualize my findings. 
 
 ### Modeling
 **Model 1: Random Forest**
-**Model 2: Stochastic Gradient Descent**
-**Model 3: Naieve Bayes**
-**Model 4: Logistic Regression**
+Random Forest with Normal Features
+Testing Accuracy: 0.55
+F1 Score: 0.5204
 
-## Results
+Random Forest with Lemmatization Features
+Testing Accuracy: 0.5667
+F1 Score: 0.5405
+
+Random Forest with Stemmed Features
+Testing Accuracy: 0.55
+F1 Score: 0.5212
+
+From the first model, we can already conclude that Random Forest may not be the best algorithm to use. Also, since lemmatized features performed the best, I will lemmetize my data for the other models. Another part of next steps could be exploring other possiblities with stemming. 
+
+**Model 2: SVM: Stochastic Gradient Descent**
+accuracy: 0.64      
+macro avg: 0.58     
+weighted avg: 0.63 
+
+**Model 3: Naieve Bayes**
+accuracy: 0.47555555555555556
+
+**Model 4: Logistic Regression**
+accuracy: 0.62       
+macro avg: 0.57       
+weighted avg: 0.61  
+
 ## Conclusions
+From all the models we used, it looks like Stochastic Gradient Descent with SVM gave us the best model with an accuracy score of 64%. Though it is not the gratest score for a classification model, it is pretty good for a model with 20 that contains classes.  
 
 # Next Steps 
 ### More Data Collection
