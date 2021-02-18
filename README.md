@@ -20,7 +20,9 @@ When we first take a look at our data, we can see the distribution of class that
 From the bar graph above, we can clearly see that a majority of our data consists of mexican recipes and comparitavelty there is a severe lack of caribbean recipes. Through further exploratory data analysis, we can generate more insights about our data. 
 
 ### Insights
+![img](./images/Overall_Cuisines_wordcloud.PNG)
 
+Above is a wordcloud using all words, excluding custom or nltk stopwords. From this image alone we can make a few assumptions about our data. One is that most recipes seem to use an oil of some kind and garlic. If we remove these terms, we may be able to help our model distinguish between recipes and cuisines. This kind of analysis can be done for each and every recipe. By doing this, we would be able to thoroughly clean our data so the model has the simplest ingredients data to work with.
 ## Methods
 ## Results
 ## Conclusions
