@@ -19,13 +19,14 @@ When we first take a look at our data, we can see the distribution of class that
 
 From the bar graph above, we can clearly see that a majority of our data consists of mexican recipes and comparitavelty there is a severe lack of caribbean recipes. Through further exploratory data analysis, we can generate more insights about our data. 
 ### Insights
+Looking at a couple wordclouds below:
 
-Looking at a couple wordclouds above and below:
 ![img](./images/Overall_Cuisines_wordcloud.png)
 
 Above is a wordcloud using all words, excluding custom or nltk stopwords. From this image alone we can make a few assumptions about our data. One is that most recipes seem to use an oil of some kind and garlic. If we remove these terms, we may be able to help our model distinguish between recipes and cuisines. This kind of analysis can be done for each and every recipe. As you can see in the example cuisine wordcloud from Vietnamese cusine, we would be able to thoroughly clean our data so the model has the simplest ingredients data to work with.
 
 ![img](./images/Vietnamese_wordcloud.png)
+
 Some obvious insights we can make from this is that Vietnamese cuisine heavily utilizes fish sauce and red chilli (most likely oil or sauce).
 
 ## Methods and Results
@@ -53,6 +54,8 @@ Testing Accuracy: 0.55
 
 F1 Score: 0.5212
 
+![img](./images/dist.png)
+
 From the first model, we can already conclude that Random Forest may not be the best algorithm to use. Also, since lemmatized features performed the best, I will lemmetize my data for the other models. Another part of next steps could be exploring other possiblities with stemming. 
 
 **Model 2: SVM: Stochastic Gradient Descent**
@@ -60,6 +63,11 @@ From the first model, we can already conclude that Random Forest may not be the 
 accuracy: 0.64      
 macro avg: 0.58     
 weighted avg: 0.63 
+
+
+![img](./images/svm_confusion_matric.png)
+
+From our confusion matrix above, we can see where our model missed and hit the target variable. 
 
 **Model 3: Naieve Bayes**
 
@@ -73,6 +81,8 @@ weighted avg: 0.61
 
 ## Conclusions
 From all the models we used, it looks like Stochastic Gradient Descent with SVM gave us the best model with an accuracy score of 64%. Though it is not the gratest score for a classification model, it is pretty good for a model with 20 that contains classes.  
+
+From the confusion matricies generated, we can see that there is no doubt that the model will most likely perform better when there are more of a certain cuisine than others. That being said, either data needs to added (covered in next steps) or data needs to be removed. 
 
 # Next Steps 
 ### More Data Collection
