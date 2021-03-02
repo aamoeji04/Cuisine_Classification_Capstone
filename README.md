@@ -54,7 +54,7 @@ Testing Accuracy: 0.55
 
 F1 Score: 0.5212
 
-![img](./images/dist.png)
+![img](./images/cm2.PNG)
 
 From the first model, we can already conclude that Random Forest may not be the best algorithm to use. Also, since lemmatized features performed the best, I will lemmetize my data for the other models. Another part of next steps could be exploring other possiblities with stemming. 
 
